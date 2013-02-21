@@ -18,19 +18,19 @@ var Xy = function (x, y) {
     },
     up: function (times) {
       times = times || 1;
-      move(xy.x, xy.y - times);
+      move(xy, xy.x, xy.y - times);
     },
     down: function (times) {
       times = times || 1;
-      move(xy.x, xy.y + times);
+      move(xy, xy.x, xy.y + times);
     },
     left: function (times) {
       times = times || 1;
-      move(xy.x - times, xy.y); 
+      move(xy, xy.x - times, xy.y); 
     },
     right: function (times) {
       times = times || 1;
-      move(xy.x + times, xy.y);
+      move(xy, xy.x + times, xy.y);
     }
   }
 };
