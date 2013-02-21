@@ -2,7 +2,7 @@
   "name": "xy",
   "repo": "corejs/xy",
   "description": "2 dimensional coordinate system",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "dependencies": {},
   "scripts": ["index.js"],
   "keywords": ["2d"],

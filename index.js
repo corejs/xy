@@ -3,13 +3,25 @@ module.exports = function (x, y) {
 };
 
 var Xy = function (x, y) {
-  var xy = this;
+  var xy = {
+    x: x || 0,
+    y: y || 0,
+    last: {}
+  };
 
-  this.x = x || 0;
-  this.y = y || 0;
-  this.last = {};
+  this.x = function () {
+    return xy.x;
+  };
 
-  this.move = {
+  this.y = function () {
+    return xy.y;
+  };
+
+  this.move = movements(xy);
+};
+
+var movements = function (xy) {
+  return {
     to: function (x, y) {
       move(xy, x, y);
     },
@@ -32,7 +44,7 @@ var Xy = function (x, y) {
       times = times || 1;
       move(xy, xy.x + times, xy.y);
     }
-  }
+  };
 };
 
 var move = function (xy, x, y) {
